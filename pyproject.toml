@@ -1,0 +1,9 @@
+[project]
+name = "blade-quiz"
+version = "0.1.0"
+description = "Guess the rowing club from its blades (data: oarspotter.com)"
+requires-python = ">=3.11"
+dependencies = ["flask>=3.0"]
+
+[tool.uv]
+package = false

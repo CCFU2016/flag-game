@@ -1,0 +1,11 @@
+{
+  "version": "0.0.1",
+  "configurations": [
+    {
+      "name": "blade-quiz",
+      "runtimeExecutable": "uv",
+      "runtimeArgs": ["run", "app.py"],
+      "port": 5040
+    }
+  ]
+}

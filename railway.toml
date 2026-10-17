@@ -1,3 +1,0 @@
-[deploy]
-startCommand = "gunicorn app:app --preload --bind 0.0.0.0:$PORT --workers 2 --threads 4"
-healthcheckPath = "/api/stats"

@@ -42,7 +42,7 @@ uv run app.py --lan    # reachable from your phone on the same wifi
 
 ## Deploy (Railway)
 
-Railway deploys from GitHub on push (`railway.toml`: gunicorn on `$PORT`; the
+Railway deploys from GitHub on push (`Procfile`: gunicorn on `$PORT`; the
 service has `PORT=5040` to match its domain). Answers live in the container's
 SQLite file, so they reset on every deploy and are shared by everyone using
 the link.

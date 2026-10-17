@@ -1,26 +1,17 @@
-"""Judge a typed answer against a club name.
+"""Judge a typed answer against a federation.
 
-People never type "Koninklijke Studenten Roeivereniging Njord"; they type
-"njord". So we compare on the distinctive words of the name (club/rowing/boat
-and friends stripped), allow small typos, and accept the site's short name.
+Accepts the poster name, World Rowing's name, the three-letter code and the
+aliases in federations.py, ignoring filler words ("Republic of", "Islands"),
+case, accents and small typos. A guess that names a *different* federation is
+always wrong, so "Austria" never passes as a typo for "Australia".
 """
 import re
 import unicodedata
 from difflib import SequenceMatcher
 
-# Words that say "this is a rowing organisation" rather than which one.
+# Words that don't tell countries apart on their own.
 GENERIC = set("""
-the a an of and at on in for de het t van der den die das des du la le les el los las l d
-rowing row rowers crew crews club clubs boat boats boating bc rc brc rfc rowingclub boatclub
-association assoc society team teams program programme academy foundation inc ltd republic
-university uni universitat universite universidad universita college school schools high hs
-junior juniors scholastic community masters alumni men women mens womens lightweights
-roeivereniging roeien roei rv zeilvereniging zeilvereeniging roeivereeniging watersport watersportvereniging
-vereniging vereeniging studenten koninklijke ksrv asrv dsrv
-ruderclub ruder rudern ruderverein rudergesellschaft ruderverband rudergemeinschaft rv rg rc ev e v verein club
-aviron nautique societe sportive sport sports cercle as sn
-remo club clube canottieri societa canottaggio sc
-roklubb roklub roddklubb roddarklubb
+the a an of and republic islands island state states federation kingdom st saint
 """.split())
 
 
@@ -32,9 +23,8 @@ def ascii_fold(s):
 
 def tokens(s):
     s = ascii_fold(s or "").lower()
-    s = re.sub(r"\b((?:[a-z]\.){2,}[a-z]?)", lambda m: m.group(1).replace(".", ""), s)  # K.S.R.V. -> ksrv
+    s = re.sub(r"\b((?:[a-z]\.){2,}[a-z]?)", lambda m: m.group(1).replace(".", ""), s)  # U.S.A. -> usa
     s = s.replace("&", " and ").replace("'", "").replace("’", "")
-    s = re.sub(r"\(.*?\)", " ", s) + " " + " ".join(re.findall(r"\((.*?)\)", s))
     return re.findall(r"[a-z0-9]+", s)
 
 
@@ -46,68 +36,50 @@ def ratio(a, b):
     return SequenceMatcher(None, a, b).ratio()
 
 
-NICKNAMES = {
-    "Netherlands": ["Holland"], "Great Britain": ["GB", "Britain", "UK"],
-    "United States of America": ["United States", "US", "America"], "Germany": ["Deutschland"],
-}
+def candidates(fed):
+    """Every way of naming this federation that we accept."""
+    names = (fed["name"], fed.get("wr_name"), fed["code"], *fed.get("aliases", []))
+    return [t for t in (tokens(n) for n in names if n) if t]
 
 
-def candidates(blade):
-    """Every way of naming this blade that we accept."""
-    out = []
-    extra = NICKNAMES.get(blade["name"], []) if blade.get("category") == "National teams" else []
-    # National teams: OarSpotter's code plus World Rowing's current code and name (ROU, Czechia, ...).
-    for raw in (blade["name"], blade.get("short"), blade.get("code"), blade.get("wr_code"), blade.get("wr_name"), *extra):
-        if raw:
-            out.append(tokens(raw))
-    # "Balliol College" on the Oxford page: "Balliol Oxford" is a fine answer too.
-    if blade.get("section") and blade["section"].endswith("colleges"):
-        out.append(tokens(blade["name"]) + tokens(blade["section"].replace(" colleges", "")))
-    return [c for c in out if c]
-
-
-def judge(guess, blades):
-    """Return 'correct', 'close' or 'wrong' for a guess against one or more blades
-    (several clubs can share one design; naming any of them counts)."""
+def exact(guess, fed):
+    """True when the guess is one of the federation's names (filler words aside)."""
     g = tokens(guess)
-    if not g:
-        return "wrong"
+    gc = set(core(g))
+    return bool(g) and any(g == c or (gc and gc == set(core(c))) for c in candidates(fed))
+
+
+def judge(guess, fed, others=()):
+    """'correct', 'close' or 'wrong' for a guess at `fed`; `others` are the
+    federations a wrong-but-real country name should be checked against."""
+    if exact(guess, fed):
+        return "correct"
+    if any(exact(guess, o) for o in others):
+        return "wrong"  # they named another country
+    g = tokens(guess)
     gc = core(g)
-    g_join, gc_join = " ".join(g), " ".join(gc)
-    best = 0.0
-    close = False
-    for blade in blades:
-        place = set(tokens(" ".join(filter(None, [blade.get("location"), blade.get("country"), blade.get("section")]))))
-        for cand in candidates(blade):
-            cc = core(cand)
-            c_join, cc_join = " ".join(cand), " ".join(cc)
-            if g_join == c_join or (gc and set(gc) == set(cc)):
-                return "correct"
-            if gc and cc:
-                r = ratio(gc_join, cc_join)
-                best = max(best, r)
-                if r >= 0.85 and len(cc_join) >= 4:
-                    return "correct"  # small typo
-                # They added the town ("Leander Henley"); other extra words could name another club.
-                if set(cc) < set(gc) and set(gc) - set(cc) <= place:
-                    return "correct"
-                # They typed part of a multi-word name ("Oxford" for "Oxford Brookes").
-                if set(gc) < set(cc) and any(len(t) >= 3 for t in gc):
-                    close = True
-                # Typo inside one word of a longer guess or name.
-                for gt in gc:
-                    for ct in cc:
-                        if len(ct) >= 5 and ratio(gt, ct) >= 0.85 and len(cc) == 1:
-                            return "correct"
-            elif not cc and ratio(g_join, c_join) >= 0.85:
-                return "correct"  # name was all generic words, e.g. "Rowing Club"
+    if not gc:
+        return "wrong"
+    gc_join = " ".join(gc)
+    best, close = 0.0, False
+    for cand in candidates(fed):
+        cc = core(cand)
+        if not cc:
+            continue
+        cc_join = " ".join(cc)
+        r = ratio(gc_join, cc_join)
+        best = max(best, r)
+        if r >= 0.85 and len(cc_join) >= 4:
+            return "correct"  # small typo
+        if set(gc) < set(cc) and any(len(t) >= 3 for t in gc):
+            close = True  # part of a longer name ("Trinidad" alone is an alias, "Papua" is not)
     if close or best >= 0.7:
         return "close"
     return "wrong"
 
 
 def pattern(name):
-    """'De Hoop' -> 'D _   H _ _ _   (2, 4)' : the crossword-style letter hint."""
+    """'New Zealand' -> 'N _ _   Z _ _ _ _ _ _   (3, 7)' : the crossword-style letter hint."""
     words = [w for w in re.split(r"\s+", name.strip()) if w]
     shapes, counts = [], []
     for w in words:

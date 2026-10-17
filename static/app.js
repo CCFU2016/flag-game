@@ -1,7 +1,7 @@
 const $ = (id) => document.getElementById(id);
-const KEY = "blade-quiz-settings";
+const KEY = "blade-quiz-federations";
 
-const defaults = { countries: [], categories: [], mode: "all", length: 10, solid: false };
+const defaults = { continents: [], mode: "all", length: 10 };
 let settings = { ...defaults };
 try { settings = { ...defaults, ...JSON.parse(localStorage.getItem(KEY) || "{}") }; } catch {}
 const save = () => { try { localStorage.setItem(KEY, JSON.stringify(settings)); } catch {} };
@@ -10,10 +10,8 @@ let round, current, seen = [];
 
 function query(extra = {}) {
   const p = new URLSearchParams({
-    countries: settings.countries.join("|"),
-    categories: settings.categories.join("|"),
+    continents: settings.continents.join("|"),
     mode: settings.mode,
-    solid: settings.solid ? "1" : "0",
     ...extra,
   });
   return p.toString();
@@ -76,22 +74,19 @@ async function loadSetup() {
   meta = await api("/api/meta");
   const s = meta.stats;
   $("stats").textContent = s.seen
-    ? `You've named ${s.known.toLocaleString()} of ${s.total.toLocaleString()} blades` + (s.misses ? `, ${s.misses} to have another go at.` : ".")
-    : `${s.total.toLocaleString()} blades to learn.`;
+    ? `You've named ${s.known} of ${s.total} federations` + (s.misses ? `, ${s.misses} to have another go at.` : ".")
+    : `${s.total} federations to learn.`;
   // Drop remembered choices that no longer exist.
-  settings.countries = settings.countries.filter((c) => meta.countries.some((x) => x.country === c));
-  settings.categories = settings.categories.filter((c) => meta.categories.some((x) => x.category === c));
+  settings.continents = settings.continents.filter((c) => meta.continents.some((x) => x.continent === c));
   changed();
 }
 
 let poolTimer;
 function changed() {
   save();
-  renderChips($("countries"), meta.countries, "countries", "country", "All countries");
-  renderChips($("categories"), meta.categories, "categories", "category", "All kinds");
+  renderChips($("continents"), meta.continents, "continents", "continent", "Whole world");
   renderSeg($("mode"), "mode");
   renderSeg($("length"), "length", Number);
-  $("solid").checked = settings.solid;
   clearTimeout(poolTimer);
   poolTimer = setTimeout(async () => {
     const { pool } = await api(`/api/pool?${query()}`);
@@ -101,7 +96,6 @@ function changed() {
     $("start").disabled = !pool;
   }, 120);
 }
-$("solid").onchange = (e) => { settings.solid = e.target.checked; changed(); };
 
 /* ---------- Quiz ---------- */
 
@@ -144,16 +138,9 @@ async function nextQuestion() {
   seen.push(q.id);
 
   $("oar").src = q.img;
-  const from = $("from");
-  const national = q.country === "National teams";
-  if (national) {
-    from.textContent = "Which national team?";
-  } else {
-    const b = document.createElement("b");
-    b.textContent = q.country;
-    from.replaceChildren("A club from ", b);
-  }
-  $("guess").placeholder = national ? "Which country?" : "Which club?";
+  const b = document.createElement("b");
+  b.textContent = q.continent;
+  $("from").replaceChildren("A federation from ", b);
   $("guess").value = "";
   $("guess").disabled = false;
   $("feedback").textContent = "";
@@ -230,26 +217,8 @@ function conclude(blade, pts) {
   v.textContent = pts ? `Correct, +${pts}` : "This one was";
   v.className = `verdict ${pts ? "good" : "bad"}`;
   $("r-name").textContent = blade.name;
-  const alias = blade.code || (blade.short && !blade.name.toLowerCase().includes(blade.short.toLowerCase()) ? blade.short : "");
-  $("r-sub").textContent = blade.category === "National teams"
-    ? (blade.wr_code
-      ? `World Rowing: ${blade.wr_name ? `${blade.wr_name}, ` : ""}${blade.wr_code}`
-      : `"${blade.code}" · not a separate World Rowing federation`)
-    : [alias && `"${alias}"`, blade.location, blade.country].filter(Boolean).join(" · ");
-  $("r-kind").textContent = blade.section || blade.category;
-  $("r-shared").textContent = blade.solid
-    ? "A plain one-colour blade: any club that uses it counted."
-    : blade.shared_with.length ? `Same blade: ${blade.shared_with.join(", ")}` : "";
-
-  const links = $("r-links");
-  links.replaceChildren();
-  const a = (href, text) => {
-    const el = document.createElement("a");
-    el.href = href; el.target = "_blank"; el.rel = "noopener"; el.textContent = text;
-    links.append(el);
-  };
-  if (blade.club_url) a(blade.club_url, "Website ↗");
-  a(blade.source_url, "On OarSpotter ↗");
+  $("r-sub").textContent = `${blade.code} · ${blade.continent}`;
+  $("r-kind").textContent = blade.wr_name ? `World Rowing calls it ${blade.wr_name}` : "";
 
   $("result").hidden = false;
   updateMeta();
@@ -282,7 +251,7 @@ function finish() {
     who.className = "who";
     who.textContent = blade.name;
     const small = document.createElement("small");
-    small.textContent = [blade.location, blade.country].filter(Boolean).join(" · ");
+    small.textContent = `${blade.code} · ${blade.continent}`;
     who.append(small);
     const p = document.createElement("span");
     p.className = `pts ${pts ? "good" : "bad"}`;

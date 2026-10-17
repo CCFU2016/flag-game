@@ -9,20 +9,17 @@
 <body>
   <header class="top">
     <button class="brand" id="home" type="button">Blade Quiz</button>
-    <span class="tag">Name the club from its blades</span>
+    <span class="tag">Name the country from its blades</span>
   </header>
 
   <main>
     <!-- Setup -->
     <section id="setup" class="screen">
-      <p class="lead">You see an oar. Type the club, school or country it belongs to. Short names count ("Njord", "Leander"), small typos too.</p>
+      <p class="lead">You see a national team's blade. Type the country, or its World Rowing code (NED, GBR, NZL). Other common names count ("Holland", "UK"), small typos too.</p>
       <p class="stats" id="stats"></p>
 
-      <h2>Countries</h2>
-      <div class="chips" id="countries"></div>
-
-      <h2>Kind of crew</h2>
-      <div class="chips" id="categories"></div>
+      <h2>Continents</h2>
+      <div class="chips" id="continents"></div>
 
       <div class="row">
         <div>
@@ -43,13 +40,11 @@
         </div>
       </div>
 
-      <label class="check"><input type="checkbox" id="solid"> Include plain one-colour blades <span class="muted">(many clubs share these; naming any of them counts)</span></label>
-
       <div class="go">
         <button class="primary" id="start" type="button">Start</button>
         <span class="muted" id="pool"></span>
       </div>
-      <p class="muted small">Scoring: 3 points for a clean answer, one less for each hint or wrong guess, at least 1 if you get there. "Close" guesses don't cost anything.</p>
+      <p class="muted small">Scoring: 3 points for a clean answer, one less for each hint or wrong guess, at least 1 if you get there. "Close" guesses don't cost anything; naming a different country does.</p>
     </section>
 
     <!-- Question -->
@@ -61,7 +56,7 @@
       <figure class="oar"><img id="oar" alt="Mystery blade"></figure>
 
       <form id="ask" autocomplete="off">
-        <input id="guess" type="text" placeholder="Which club?" autocapitalize="off" autocorrect="off" spellcheck="false" enterkeyhint="go">
+        <input id="guess" type="text" placeholder="Which country?" autocapitalize="off" autocorrect="off" spellcheck="false" enterkeyhint="go">
         <button class="primary" type="submit">Check</button>
       </form>
       <p class="feedback" id="feedback" aria-live="polite"></p>
@@ -76,8 +71,6 @@
         <p class="name" id="r-name"></p>
         <p class="sub" id="r-sub"></p>
         <p class="sub" id="r-kind"></p>
-        <p class="sub" id="r-shared"></p>
-        <p class="links" id="r-links"></p>
         <button class="primary" id="next" type="button">Next</button>
       </div>
       <button class="link stop" id="stop" type="button">End round</button>
@@ -95,7 +88,7 @@
     </section>
   </main>
 
-  <footer>Blade designs from <a href="https://www.oarspotter.com/" target="_blank" rel="noopener">OarSpotter.com</a> by Doug Rathburn. Images load from his site and stay his.</footer>
+  <footer>Blade designs from World Rowing's <i>158 Member Federations</i> poster (August 2026).</footer>
   <script src="{{ url_for('static', filename='app.js') }}"></script>
 </body>
 </html>

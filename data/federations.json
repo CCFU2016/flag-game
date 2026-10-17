@@ -1,0 +1,1266 @@
+[
+ {
+  "code": "AFG",
+  "name": "Afghanistan",
+  "poster_name": "AFGHANISTAN",
+  "row": 0,
+  "col": 0,
+  "wr_name": "Afghanistan"
+ },
+ {
+  "code": "ALB",
+  "name": "Albania",
+  "poster_name": "ALBANIA",
+  "row": 0,
+  "col": 1,
+  "wr_name": "Albania"
+ },
+ {
+  "code": "ALG",
+  "name": "Algeria",
+  "poster_name": "ALGERIA",
+  "row": 0,
+  "col": 2,
+  "wr_name": "Algeria"
+ },
+ {
+  "code": "ANG",
+  "name": "Angola",
+  "poster_name": "ANGOLA",
+  "row": 0,
+  "col": 3,
+  "wr_name": "Angola"
+ },
+ {
+  "code": "ARG",
+  "name": "Argentina",
+  "poster_name": "ARGENTINA",
+  "row": 0,
+  "col": 4,
+  "wr_name": "Argentina"
+ },
+ {
+  "code": "ARM",
+  "name": "Armenia",
+  "poster_name": "ARMENIA",
+  "row": 0,
+  "col": 5,
+  "wr_name": "Armenia"
+ },
+ {
+  "code": "ASA",
+  "name": "American Samoa",
+  "poster_name": "AMERICAN SAMOA",
+  "row": 0,
+  "col": 6,
+  "wr_name": "American Samoa"
+ },
+ {
+  "code": "AUS",
+  "name": "Australia",
+  "poster_name": "AUSTRALIA",
+  "row": 0,
+  "col": 7,
+  "wr_name": "Australia"
+ },
+ {
+  "code": "AUT",
+  "name": "Austria",
+  "poster_name": "AUSTRIA",
+  "row": 0,
+  "col": 8,
+  "wr_name": "Austria"
+ },
+ {
+  "code": "AZE",
+  "name": "Azerbaijan",
+  "poster_name": "AZERBAIJAN",
+  "row": 0,
+  "col": 9,
+  "wr_name": "Azerbaijan"
+ },
+ {
+  "code": "BAN",
+  "name": "Bangladesh",
+  "poster_name": "BANGLADESH",
+  "row": 0,
+  "col": 10,
+  "wr_name": "Bangladesh"
+ },
+ {
+  "code": "BAR",
+  "name": "Barbados",
+  "poster_name": "BARBADOS",
+  "row": 0,
+  "col": 11,
+  "wr_name": "Barbados"
+ },
+ {
+  "code": "BEL",
+  "name": "Belgium",
+  "poster_name": "BELGIUM",
+  "row": 1,
+  "col": 0,
+  "wr_name": "Belgium"
+ },
+ {
+  "code": "BEN",
+  "name": "Benin",
+  "poster_name": "BENIN",
+  "row": 1,
+  "col": 1,
+  "wr_name": "Benin"
+ },
+ {
+  "code": "BER",
+  "name": "Bermuda",
+  "poster_name": "BERMUDA",
+  "row": 1,
+  "col": 2,
+  "wr_name": "Bermuda"
+ },
+ {
+  "code": "BIH",
+  "name": "Bosnia-Herzegovina",
+  "poster_name": "BOSNIA-HERZEGOVINA",
+  "row": 1,
+  "col": 3,
+  "wr_name": "Bosnia and Herzegovina"
+ },
+ {
+  "code": "BLR",
+  "name": "Belarus",
+  "poster_name": "BELARUS",
+  "row": 1,
+  "col": 4,
+  "wr_name": "Belarus"
+ },
+ {
+  "code": "BOL",
+  "name": "Bolivia",
+  "poster_name": "BOLIVIA",
+  "row": 1,
+  "col": 5,
+  "wr_name": "Bolivia"
+ },
+ {
+  "code": "BOT",
+  "name": "Botswana",
+  "poster_name": "BOTSWANA",
+  "row": 1,
+  "col": 6,
+  "wr_name": "Botswana"
+ },
+ {
+  "code": "BRA",
+  "name": "Brazil",
+  "poster_name": "BRAZIL",
+  "row": 1,
+  "col": 7,
+  "wr_name": "Brazil"
+ },
+ {
+  "code": "BRN",
+  "name": "Bahrain",
+  "poster_name": "BAHRAIN",
+  "row": 1,
+  "col": 8,
+  "wr_name": "Bahrain"
+ },
+ {
+  "code": "BUL",
+  "name": "Bulgaria",
+  "poster_name": "BULGARIA",
+  "row": 1,
+  "col": 9,
+  "wr_name": "Bulgaria"
+ },
+ {
+  "code": "BUR",
+  "name": "Burkina Faso",
+  "poster_name": "BURKINA FASO",
+  "row": 1,
+  "col": 10,
+  "wr_name": "Burkina Faso"
+ },
+ {
+  "code": "CAM",
+  "name": "Cambodia",
+  "poster_name": "CAMBODIA",
+  "row": 1,
+  "col": 11,
+  "wr_name": "Cambodia"
+ },
+ {
+  "code": "CAN",
+  "name": "Canada",
+  "poster_name": "CANADA",
+  "row": 2,
+  "col": 0,
+  "wr_name": "Canada"
+ },
+ {
+  "code": "CAY",
+  "name": "Cayman Islands",
+  "poster_name": "CAYMAN ISLANDS",
+  "row": 2,
+  "col": 1,
+  "wr_name": "Cayman Islands"
+ },
+ {
+  "code": "CHI",
+  "name": "Chile",
+  "poster_name": "CHILE",
+  "row": 2,
+  "col": 2,
+  "wr_name": "Chile"
+ },
+ {
+  "code": "CHN",
+  "name": "People’s Republic of China",
+  "poster_name": "PEOPLE’S REPUBLIC OF CHINA",
+  "row": 2,
+  "col": 3,
+  "wr_name": "China"
+ },
+ {
+  "code": "CIV",
+  "name": "Ivory Coast",
+  "poster_name": "IVORY COAST",
+  "row": 2,
+  "col": 4,
+  "wr_name": "Ivory Coast"
+ },
+ {
+  "code": "CMR",
+  "name": "Cameroon",
+  "poster_name": "CAMEROON",
+  "row": 2,
+  "col": 5,
+  "wr_name": "Cameroon"
+ },
+ {
+  "code": "COL",
+  "name": "Colombia",
+  "poster_name": "COLOMBIA",
+  "row": 2,
+  "col": 6,
+  "wr_name": "Colombia"
+ },
+ {
+  "code": "CPV",
+  "name": "Cape Verde",
+  "poster_name": "CAPE VERDE",
+  "row": 2,
+  "col": 7,
+  "wr_name": "Cape Verde"
+ },
+ {
+  "code": "CRC",
+  "name": "Costa Rica",
+  "poster_name": "COSTA RICA",
+  "row": 2,
+  "col": 8,
+  "wr_name": "Costa Rica"
+ },
+ {
+  "code": "CRO",
+  "name": "Croatia",
+  "poster_name": "CROATIA",
+  "row": 2,
+  "col": 9,
+  "wr_name": "Croatia"
+ },
+ {
+  "code": "CUB",
+  "name": "Cuba",
+  "poster_name": "CUBA",
+  "row": 2,
+  "col": 10,
+  "wr_name": "Cuba"
+ },
+ {
+  "code": "CYP",
+  "name": "Cyprus",
+  "poster_name": "CYPRUS",
+  "row": 2,
+  "col": 11,
+  "wr_name": "Cyprus"
+ },
+ {
+  "code": "CZE",
+  "name": "Czech Republic",
+  "poster_name": "CZECH REPUBLIC",
+  "row": 3,
+  "col": 0,
+  "wr_name": "Czechia"
+ },
+ {
+  "code": "DEN",
+  "name": "Denmark",
+  "poster_name": "DENMARK",
+  "row": 3,
+  "col": 1,
+  "wr_name": "Denmark"
+ },
+ {
+  "code": "DJI",
+  "name": "Djibouti",
+  "poster_name": "DJIBOUTI",
+  "row": 3,
+  "col": 2,
+  "wr_name": "Djibouti"
+ },
+ {
+  "code": "DMA",
+  "name": "Dominica",
+  "poster_name": "DOMINICA",
+  "row": 3,
+  "col": 3,
+  "wr_name": "Dominica"
+ },
+ {
+  "code": "DOM",
+  "name": "Dominican Republic",
+  "poster_name": "DOMINICAN REPUBLIC",
+  "row": 3,
+  "col": 4,
+  "wr_name": "Dominican Republic"
+ },
+ {
+  "code": "ECU",
+  "name": "Ecuador",
+  "poster_name": "ECUADOR",
+  "row": 3,
+  "col": 5,
+  "wr_name": "Ecuador"
+ },
+ {
+  "code": "EGY",
+  "name": "Egypt",
+  "poster_name": "EGYPT",
+  "row": 3,
+  "col": 6,
+  "wr_name": "Egypt"
+ },
+ {
+  "code": "ESA",
+  "name": "El Salvador",
+  "poster_name": "EL SALVADOR",
+  "row": 3,
+  "col": 7,
+  "wr_name": "El Salvador"
+ },
+ {
+  "code": "ESP",
+  "name": "Spain",
+  "poster_name": "SPAIN",
+  "row": 3,
+  "col": 8,
+  "wr_name": "Spain"
+ },
+ {
+  "code": "EST",
+  "name": "Estonia",
+  "poster_name": "ESTONIA",
+  "row": 3,
+  "col": 9,
+  "wr_name": "Estonia"
+ },
+ {
+  "code": "FIJ",
+  "name": "Fiji",
+  "poster_name": "FIJI",
+  "row": 3,
+  "col": 10,
+  "wr_name": "Fiji"
+ },
+ {
+  "code": "FIN",
+  "name": "Finland",
+  "poster_name": "FINLAND",
+  "row": 3,
+  "col": 11,
+  "wr_name": "Finland"
+ },
+ {
+  "code": "FRA",
+  "name": "France",
+  "poster_name": "FRANCE",
+  "row": 4,
+  "col": 0,
+  "wr_name": "France"
+ },
+ {
+  "code": "GBR",
+  "name": "Great Britain",
+  "poster_name": "GREAT BRITAIN",
+  "row": 4,
+  "col": 1,
+  "wr_name": "Great Britain"
+ },
+ {
+  "code": "GEO",
+  "name": "Georgia",
+  "poster_name": "GEORGIA",
+  "row": 4,
+  "col": 2,
+  "wr_name": "Georgia"
+ },
+ {
+  "code": "GER",
+  "name": "Germany",
+  "poster_name": "GERMANY",
+  "row": 4,
+  "col": 3,
+  "wr_name": "Germany"
+ },
+ {
+  "code": "GHA",
+  "name": "Ghana",
+  "poster_name": "GHANA",
+  "row": 4,
+  "col": 4,
+  "wr_name": "Ghana"
+ },
+ {
+  "code": "GIB",
+  "name": "Gibraltar",
+  "poster_name": "GIBRALTAR",
+  "row": 4,
+  "col": 5,
+  "wr_name": "Gibraltar"
+ },
+ {
+  "code": "GRE",
+  "name": "Greece",
+  "poster_name": "GREECE",
+  "row": 4,
+  "col": 6,
+  "wr_name": "Greece"
+ },
+ {
+  "code": "GUA",
+  "name": "Guatemala",
+  "poster_name": "GUATEMALA",
+  "row": 4,
+  "col": 7,
+  "wr_name": "Guatemala"
+ },
+ {
+  "code": "GUI",
+  "name": "Guinea",
+  "poster_name": "GUINEA",
+  "row": 4,
+  "col": 8,
+  "wr_name": "Guinea"
+ },
+ {
+  "code": "HAI",
+  "name": "Haiti",
+  "poster_name": "HAITI",
+  "row": 4,
+  "col": 9,
+  "wr_name": "Haiti"
+ },
+ {
+  "code": "HKG",
+  "name": "Hong Kong China",
+  "poster_name": "HONG KONG CHINA",
+  "row": 4,
+  "col": 10,
+  "wr_name": "Hong Kong, China"
+ },
+ {
+  "code": "HON",
+  "name": "Honduras",
+  "poster_name": "HONDURAS",
+  "row": 4,
+  "col": 11,
+  "wr_name": "Honduras"
+ },
+ {
+  "code": "HUN",
+  "name": "Hungary",
+  "poster_name": "HUNGARY",
+  "row": 5,
+  "col": 0,
+  "wr_name": "Hungary"
+ },
+ {
+  "code": "INA",
+  "name": "Indonesia",
+  "poster_name": "INDONESIA",
+  "row": 5,
+  "col": 1,
+  "wr_name": "Indonesia"
+ },
+ {
+  "code": "IND",
+  "name": "India",
+  "poster_name": "INDIA",
+  "row": 5,
+  "col": 2,
+  "wr_name": "India"
+ },
+ {
+  "code": "IRI",
+  "name": "Islamic Republic of Iran",
+  "poster_name": "ISLAMIC REPUBLIC OF IRAN",
+  "row": 5,
+  "col": 3,
+  "wr_name": "Iran"
+ },
+ {
+  "code": "IRL",
+  "name": "Ireland",
+  "poster_name": "IRELAND",
+  "row": 5,
+  "col": 4,
+  "wr_name": "Ireland"
+ },
+ {
+  "code": "IRQ",
+  "name": "Iraq",
+  "poster_name": "IRAQ",
+  "row": 5,
+  "col": 5,
+  "wr_name": "Iraq"
+ },
+ {
+  "code": "ISL",
+  "name": "Iceland",
+  "poster_name": "ICELAND",
+  "row": 5,
+  "col": 6,
+  "wr_name": "Iceland"
+ },
+ {
+  "code": "ISR",
+  "name": "Israel",
+  "poster_name": "ISRAEL",
+  "row": 5,
+  "col": 7,
+  "wr_name": "Israel"
+ },
+ {
+  "code": "ITA",
+  "name": "Italy",
+  "poster_name": "ITALY",
+  "row": 5,
+  "col": 8,
+  "wr_name": "Italy"
+ },
+ {
+  "code": "JAM",
+  "name": "Jamaica",
+  "poster_name": "JAMAICA",
+  "row": 5,
+  "col": 9,
+  "wr_name": "Jamaica"
+ },
+ {
+  "code": "JOR",
+  "name": "Jordan",
+  "poster_name": "JORDAN",
+  "row": 5,
+  "col": 10,
+  "wr_name": "Jordan"
+ },
+ {
+  "code": "JPN",
+  "name": "Japan",
+  "poster_name": "JAPAN",
+  "row": 5,
+  "col": 11,
+  "wr_name": "Japan"
+ },
+ {
+  "code": "KAZ",
+  "name": "Kazakhstan",
+  "poster_name": "KAZAKHSTAN",
+  "row": 6,
+  "col": 0,
+  "wr_name": "Kazakhstan"
+ },
+ {
+  "code": "KEN",
+  "name": "Kenya",
+  "poster_name": "KENYA",
+  "row": 6,
+  "col": 1,
+  "wr_name": "Kenya"
+ },
+ {
+  "code": "KGZ",
+  "name": "Kyrgyzstan",
+  "poster_name": "KYRGYZSTAN",
+  "row": 6,
+  "col": 2,
+  "wr_name": "Kyrgyzstan"
+ },
+ {
+  "code": "KIR",
+  "name": "Kiribati",
+  "poster_name": "KIRIBATI",
+  "row": 6,
+  "col": 3,
+  "wr_name": "Kiribati"
+ },
+ {
+  "code": "KOR",
+  "name": "Republic of Korea",
+  "poster_name": "REPUBLIC OF KOREA",
+  "row": 6,
+  "col": 4,
+  "wr_name": "South Korea"
+ },
+ {
+  "code": "KSA",
+  "name": "Saudi Arabia",
+  "poster_name": "SAUDI ARABIA",
+  "row": 6,
+  "col": 5,
+  "wr_name": "Saudi Arabia"
+ },
+ {
+  "code": "KUW",
+  "name": "Kuwait",
+  "poster_name": "KUWAIT",
+  "row": 6,
+  "col": 6,
+  "wr_name": "Kuwait"
+ },
+ {
+  "code": "LAT",
+  "name": "Latvia",
+  "poster_name": "LATVIA",
+  "row": 6,
+  "col": 7,
+  "wr_name": "Latvia"
+ },
+ {
+  "code": "LBA",
+  "name": "Libya",
+  "poster_name": "LIBYA",
+  "row": 6,
+  "col": 8,
+  "wr_name": "Libya"
+ },
+ {
+  "code": "LBN",
+  "name": "Lebanon",
+  "poster_name": "LEBANON",
+  "row": 6,
+  "col": 9,
+  "wr_name": "Lebanon"
+ },
+ {
+  "code": "LES",
+  "name": "Lesotho",
+  "poster_name": "LESOTHO",
+  "row": 6,
+  "col": 10,
+  "wr_name": "Lesotho"
+ },
+ {
+  "code": "LTU",
+  "name": "Lithuania",
+  "poster_name": "LITHUANIA",
+  "row": 6,
+  "col": 11,
+  "wr_name": "Lithuania"
+ },
+ {
+  "code": "LUX",
+  "name": "Luxembourg",
+  "poster_name": "LUXEMBOURG",
+  "row": 7,
+  "col": 0,
+  "wr_name": "Luxembourg"
+ },
+ {
+  "code": "MAD",
+  "name": "Madagascar",
+  "poster_name": "MADAGASCAR",
+  "row": 7,
+  "col": 1,
+  "wr_name": "Madagascar"
+ },
+ {
+  "code": "MAR",
+  "name": "Morocco",
+  "poster_name": "MOROCCO",
+  "row": 7,
+  "col": 2,
+  "wr_name": "Morocco"
+ },
+ {
+  "code": "MAS",
+  "name": "Malaysia",
+  "poster_name": "MALAYSIA",
+  "row": 7,
+  "col": 3,
+  "wr_name": "Malaysia"
+ },
+ {
+  "code": "MAW",
+  "name": "Malawi",
+  "poster_name": "MALAWI",
+  "row": 7,
+  "col": 4,
+  "wr_name": "Malawi"
+ },
+ {
+  "code": "MDA",
+  "name": "Moldova",
+  "poster_name": "MOLDOVA",
+  "row": 7,
+  "col": 5,
+  "wr_name": "Moldova"
+ },
+ {
+  "code": "MDV",
+  "name": "Maldives",
+  "poster_name": "MALDIVES",
+  "row": 7,
+  "col": 6,
+  "wr_name": "Maldives"
+ },
+ {
+  "code": "MEX",
+  "name": "Mexico",
+  "poster_name": "MEXICO",
+  "row": 7,
+  "col": 7,
+  "wr_name": "Mexico"
+ },
+ {
+  "code": "MGL",
+  "name": "Mongolia",
+  "poster_name": "MONGOLIA",
+  "row": 7,
+  "col": 8,
+  "wr_name": "Mongolia"
+ },
+ {
+  "code": "MKD",
+  "name": "Republic of North Macedonia",
+  "poster_name": "REPUBLIC OF NORTH MACEDONIA",
+  "row": 7,
+  "col": 9,
+  "wr_name": "Republic of North Macedonia"
+ },
+ {
+  "code": "MLI",
+  "name": "Mali",
+  "poster_name": "MALI",
+  "row": 7,
+  "col": 10,
+  "wr_name": "Mali"
+ },
+ {
+  "code": "MLT",
+  "name": "Malta",
+  "poster_name": "MALTA",
+  "row": 7,
+  "col": 11,
+  "wr_name": "Malta"
+ },
+ {
+  "code": "MON",
+  "name": "Monaco",
+  "poster_name": "MONACO",
+  "row": 8,
+  "col": 0,
+  "wr_name": "Monaco"
+ },
+ {
+  "code": "MOZ",
+  "name": "Mozambique",
+  "poster_name": "MOZAMBIQUE",
+  "row": 8,
+  "col": 1,
+  "wr_name": "Mozambique"
+ },
+ {
+  "code": "MRI",
+  "name": "Mauritius",
+  "poster_name": "MAURITIUS",
+  "row": 8,
+  "col": 2,
+  "wr_name": "Mauritius"
+ },
+ {
+  "code": "MTN",
+  "name": "Mauritania",
+  "poster_name": "MAURITANIA",
+  "row": 8,
+  "col": 3,
+  "wr_name": "Mauritania"
+ },
+ {
+  "code": "MYA",
+  "name": "Myanmar",
+  "poster_name": "MYANMAR",
+  "row": 8,
+  "col": 4,
+  "wr_name": "Myanmar"
+ },
+ {
+  "code": "NAM",
+  "name": "Namibia",
+  "poster_name": "NAMIBIA",
+  "row": 8,
+  "col": 5,
+  "wr_name": "Namibia"
+ },
+ {
+  "code": "NCA",
+  "name": "Nicaragua",
+  "poster_name": "NICARAGUA",
+  "row": 8,
+  "col": 6,
+  "wr_name": "Nicaragua"
+ },
+ {
+  "code": "NED",
+  "name": "Netherlands",
+  "poster_name": "NETHERLANDS",
+  "row": 8,
+  "col": 7,
+  "wr_name": "Netherlands"
+ },
+ {
+  "code": "NEP",
+  "name": "Nepal",
+  "poster_name": "NEPAL",
+  "row": 8,
+  "col": 8,
+  "wr_name": "Nepal"
+ },
+ {
+  "code": "NGR",
+  "name": "Nigeria",
+  "poster_name": "NIGERIA",
+  "row": 8,
+  "col": 9,
+  "wr_name": "Nigeria"
+ },
+ {
+  "code": "NIG",
+  "name": "Niger",
+  "poster_name": "NIGER",
+  "row": 8,
+  "col": 10,
+  "wr_name": "Niger"
+ },
+ {
+  "code": "NOR",
+  "name": "Norway",
+  "poster_name": "NORWAY",
+  "row": 8,
+  "col": 11,
+  "wr_name": "Norway"
+ },
+ {
+  "code": "NZL",
+  "name": "New Zealand",
+  "poster_name": "NEW ZEALAND",
+  "row": 9,
+  "col": 0,
+  "wr_name": "New Zealand"
+ },
+ {
+  "code": "PAK",
+  "name": "Pakistan",
+  "poster_name": "PAKISTAN",
+  "row": 9,
+  "col": 1,
+  "wr_name": "Pakistan"
+ },
+ {
+  "code": "PAN",
+  "name": "Panama",
+  "poster_name": "PANAMA",
+  "row": 9,
+  "col": 2,
+  "wr_name": "Panama"
+ },
+ {
+  "code": "PNG",
+  "name": "Papua New Guinea",
+  "poster_name": "PAPUA NEW GUINEA",
+  "row": 9,
+  "col": 3,
+  "wr_name": "Papua New Guinea"
+ },
+ {
+  "code": "PAR",
+  "name": "Paraguay",
+  "poster_name": "PARAGUAY",
+  "row": 9,
+  "col": 4,
+  "wr_name": "Paraguay"
+ },
+ {
+  "code": "PER",
+  "name": "Peru",
+  "poster_name": "PERU",
+  "row": 9,
+  "col": 5,
+  "wr_name": "Peru"
+ },
+ {
+  "code": "PHI",
+  "name": "Philippines",
+  "poster_name": "PHILIPPINES",
+  "row": 9,
+  "col": 6,
+  "wr_name": "Philippines"
+ },
+ {
+  "code": "PLE",
+  "name": "Palestine",
+  "poster_name": "PALESTINE",
+  "row": 9,
+  "col": 7,
+  "wr_name": "Palestine"
+ },
+ {
+  "code": "POL",
+  "name": "Poland",
+  "poster_name": "POLAND",
+  "row": 9,
+  "col": 8,
+  "wr_name": "Poland"
+ },
+ {
+  "code": "POR",
+  "name": "Portugal",
+  "poster_name": "PORTUGAL",
+  "row": 9,
+  "col": 9,
+  "wr_name": "Portugal"
+ },
+ {
+  "code": "PRK",
+  "name": "DPR of Korea",
+  "poster_name": "DPR OF KOREA",
+  "row": 9,
+  "col": 10,
+  "wr_name": "North Korea"
+ },
+ {
+  "code": "PUR",
+  "name": "Puerto Rico",
+  "poster_name": "PUERTO RICO",
+  "row": 9,
+  "col": 11,
+  "wr_name": "Puerto Rico"
+ },
+ {
+  "code": "QAT",
+  "name": "Qatar",
+  "poster_name": "QATAR",
+  "row": 10,
+  "col": 0,
+  "wr_name": "Qatar"
+ },
+ {
+  "code": "ROU",
+  "name": "Romania",
+  "poster_name": "ROMANIA",
+  "row": 10,
+  "col": 1,
+  "wr_name": "Romania"
+ },
+ {
+  "code": "RSA",
+  "name": "South Africa",
+  "poster_name": "SOUTH AFRICA",
+  "row": 10,
+  "col": 2,
+  "wr_name": "South Africa"
+ },
+ {
+  "code": "RUS",
+  "name": "Russia",
+  "poster_name": "RUSSIA",
+  "row": 10,
+  "col": 3,
+  "wr_name": "Russia"
+ },
+ {
+  "code": "SAM",
+  "name": "Samoa",
+  "poster_name": "SAMOA",
+  "row": 10,
+  "col": 4,
+  "wr_name": "Samoa"
+ },
+ {
+  "code": "SEN",
+  "name": "Senegal",
+  "poster_name": "SENEGAL",
+  "row": 10,
+  "col": 5,
+  "wr_name": "Senegal"
+ },
+ {
+  "code": "SLE",
+  "name": "Sierra Leone",
+  "poster_name": "SIERRA LEONE",
+  "row": 10,
+  "col": 6,
+  "wr_name": "Sierra Leone"
+ },
+ {
+  "code": "SGP",
+  "name": "Singapore",
+  "poster_name": "SINGAPORE",
+  "row": 10,
+  "col": 7,
+  "wr_name": "Singapore"
+ },
+ {
+  "code": "SLO",
+  "name": "Slovenia",
+  "poster_name": "SLOVENIA",
+  "row": 10,
+  "col": 8,
+  "wr_name": "Slovenia"
+ },
+ {
+  "code": "SOM",
+  "name": "Somalia",
+  "poster_name": "SOMALIA",
+  "row": 10,
+  "col": 9,
+  "wr_name": "Somalia"
+ },
+ {
+  "code": "SRB",
+  "name": "Serbia",
+  "poster_name": "SERBIA",
+  "row": 10,
+  "col": 10,
+  "wr_name": "Serbia"
+ },
+ {
+  "code": "SRI",
+  "name": "Sri Lanka",
+  "poster_name": "SRI LANKA",
+  "row": 10,
+  "col": 11,
+  "wr_name": "Sri Lanka"
+ },
+ {
+  "code": "SUD",
+  "name": "Sudan",
+  "poster_name": "SUDAN",
+  "row": 11,
+  "col": 0,
+  "wr_name": "Sudan"
+ },
+ {
+  "code": "SUI",
+  "name": "Switzerland",
+  "poster_name": "SWITZERLAND",
+  "row": 11,
+  "col": 1,
+  "wr_name": "Switzerland"
+ },
+ {
+  "code": "SVK",
+  "name": "Slovakia",
+  "poster_name": "SLOVAKIA",
+  "row": 11,
+  "col": 2,
+  "wr_name": "Slovakia"
+ },
+ {
+  "code": "SWE",
+  "name": "Sweden",
+  "poster_name": "SWEDEN",
+  "row": 11,
+  "col": 3,
+  "wr_name": "Sweden"
+ },
+ {
+  "code": "SWZ",
+  "name": "Eswatini",
+  "poster_name": "ESWATINI",
+  "row": 11,
+  "col": 4,
+  "wr_name": "Eswatini"
+ },
+ {
+  "code": "SYR",
+  "name": "Syrian Arab Republic",
+  "poster_name": "SYRIAN ARAB REPUBLIC",
+  "row": 11,
+  "col": 5,
+  "wr_name": "Syria"
+ },
+ {
+  "code": "TGA",
+  "name": "Tonga",
+  "poster_name": "TONGA",
+  "row": 11,
+  "col": 6,
+  "wr_name": "Tonga"
+ },
+ {
+  "code": "THA",
+  "name": "Thailand",
+  "poster_name": "THAILAND",
+  "row": 11,
+  "col": 7,
+  "wr_name": "Thailand"
+ },
+ {
+  "code": "TKM",
+  "name": "Turkmenistan",
+  "poster_name": "TURKMENISTAN",
+  "row": 11,
+  "col": 8,
+  "wr_name": "Turkmenistan"
+ },
+ {
+  "code": "TOG",
+  "name": "Togo",
+  "poster_name": "TOGO",
+  "row": 11,
+  "col": 9,
+  "wr_name": "Togo"
+ },
+ {
+  "code": "TPE",
+  "name": "Chinese Taipei",
+  "poster_name": "CHINESE TAIPEI",
+  "row": 11,
+  "col": 10,
+  "wr_name": "Chinese Taipei"
+ },
+ {
+  "code": "TTO",
+  "name": "Trinidad & Tobago",
+  "poster_name": "TRINIDAD & TOBAGO",
+  "row": 11,
+  "col": 11,
+  "wr_name": "Trinidad and Tobago"
+ },
+ {
+  "code": "TUN",
+  "name": "Tunisia",
+  "poster_name": "TUNISIA",
+  "row": 12,
+  "col": 0,
+  "wr_name": "Tunisia"
+ },
+ {
+  "code": "TUR",
+  "name": "Turkey",
+  "poster_name": "TURKEY",
+  "row": 12,
+  "col": 1,
+  "wr_name": "Turkiye"
+ },
+ {
+  "code": "UAE",
+  "name": "United Arab Emirates",
+  "poster_name": "UNITED ARAB EMIRATES",
+  "row": 12,
+  "col": 2,
+  "wr_name": "United Arab Emirates"
+ },
+ {
+  "code": "UGA",
+  "name": "Uganda",
+  "poster_name": "UGANDA",
+  "row": 12,
+  "col": 3,
+  "wr_name": "Uganda"
+ },
+ {
+  "code": "UKR",
+  "name": "Ukraine",
+  "poster_name": "UKRAINE",
+  "row": 12,
+  "col": 4,
+  "wr_name": "Ukraine"
+ },
+ {
+  "code": "URU",
+  "name": "Uruguay",
+  "poster_name": "URUGUAY",
+  "row": 12,
+  "col": 5,
+  "wr_name": "Uruguay"
+ },
+ {
+  "code": "USA",
+  "name": "United States of America",
+  "poster_name": "UNITED STATES OF AMERICA",
+  "row": 12,
+  "col": 6,
+  "wr_name": "United States"
+ },
+ {
+  "code": "UZB",
+  "name": "Uzbekistan",
+  "poster_name": "UZBEKISTAN",
+  "row": 12,
+  "col": 7,
+  "wr_name": "Uzbekistan"
+ },
+ {
+  "code": "VAN",
+  "name": "Vanuatu",
+  "poster_name": "VANUATU",
+  "row": 12,
+  "col": 8,
+  "wr_name": "Vanuatu"
+ },
+ {
+  "code": "VEN",
+  "name": "Venezuela",
+  "poster_name": "VENEZUELA",
+  "row": 12,
+  "col": 9,
+  "wr_name": "Venezuela"
+ },
+ {
+  "code": "VIE",
+  "name": "Vietnam",
+  "poster_name": "VIETNAM",
+  "row": 12,
+  "col": 10,
+  "wr_name": "Vietnam"
+ },
+ {
+  "code": "VIN",
+  "name": "St. Vincent & Grenadines",
+  "poster_name": "ST. VINCENT & GRENADINES",
+  "row": 12,
+  "col": 11,
+  "wr_name": "Saint Vincent and the Grenadines"
+ },
+ {
+  "code": "ZAM",
+  "name": "Zambia",
+  "poster_name": "ZAMBIA",
+  "row": 13,
+  "col": 0,
+  "wr_name": "Zambia"
+ },
+ {
+  "code": "ZIM",
+  "name": "Zimbabwe",
+  "poster_name": "ZIMBABWE",
+  "row": 13,
+  "col": 1,
+  "wr_name": "Zimbabwe"
+ }
+]

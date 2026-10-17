@@ -1,7 +1,7 @@
 [project]
 name = "blade-quiz"
 version = "0.1.0"
-description = "Guess the rowing club from its blades (data: oarspotter.com)"
+description = "Name the country from its rowing blades (World Rowing member federations)"
 requires-python = ">=3.11"
 dependencies = [
     "flask>=3.0",
@@ -10,3 +10,9 @@ dependencies = [
 
 [tool.uv]
 package = false
+
+[dependency-groups]
+dev = [
+    "pillow>=13.0.0",
+    "pymupdf>=1.28.2",
+]

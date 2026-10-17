@@ -1,29 +1,32 @@
 """Blade Quiz: see a rowing blade, name the club.
 
     uv run app.py   ->  http://127.0.0.1:5040
+    On Railway: gunicorn (see railway.toml), listening on $PORT.
 """
-import pathlib
+import os
 import random
 import sqlite3
 import sys
 import urllib.request
 from collections import OrderedDict
 
-from flask import Flask, Response, abort, g, jsonify, render_template, request
+from flask import Flask, Response, abort, g, jsonify, redirect, render_template, request
 
 from matching import judge, pattern, tokens
+from store import DB, ensure_db
 
-ROOT = pathlib.Path(__file__).parent
-DB = ROOT / "blades.db"
 PORT = 5040
+# Locally the images are fetched through this app, which hides the file name (often
+# the club's name). On a public deploy we don't copy OarSpotter's images: the
+# browser loads them straight from oarspotter.com.
+PROXY_IMAGES = not os.environ.get("RAILWAY_ENVIRONMENT")
 
 app = Flask(__name__)
+ensure_db()
 
 
 def db():
     if "db" not in g:
-        if not DB.exists():
-            sys.exit("blades.db not found: run `uv run scrape.py` first")
         g.db = sqlite3.connect(DB)
         g.db.row_factory = sqlite3.Row
     return g.db
@@ -150,6 +153,8 @@ _img_cache = OrderedDict()
 def image(blade_id):
     # Proxied so the file name (often the club name) doesn't give the answer away.
     # Held in memory only; the images belong to OarSpotter.com.
+    if not PROXY_IMAGES:
+        return redirect(blade(blade_id)["image_url"])
     if blade_id not in _img_cache:
         url = blade(blade_id)["image_url"]
         req = urllib.request.Request(url, headers={"User-Agent": "Mozilla/5.0", "Referer": "https://www.oarspotter.com/"})
@@ -222,5 +227,5 @@ def stats():
 
 
 if __name__ == "__main__":
-    host = "0.0.0.0" if "--lan" in sys.argv else "127.0.0.1"
-    app.run(host=host, port=PORT, debug="--debug" in sys.argv)
+    host = "0.0.0.0" if "--lan" in sys.argv or "PORT" in os.environ else "127.0.0.1"
+    app.run(host=host, port=int(os.environ.get("PORT", PORT)), debug="--debug" in sys.argv)

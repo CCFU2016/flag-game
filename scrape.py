@@ -18,10 +18,10 @@ import urllib.parse
 import urllib.request
 
 from matching import tokens
+from store import DB, SEED, export_seed, migrate
 
 ROOT = pathlib.Path(__file__).parent
 CACHE = ROOT / "cache"
-DB = ROOT / "blades.db"
 HOME = "https://www.oarspotter.com/"
 UA = "Mozilla/5.0 (blade-quiz; personal quiz, polite crawler)"
 
@@ -153,32 +153,6 @@ def parse(url, page):
     return rows
 
 
-SCHEMA = """
-CREATE TABLE IF NOT EXISTS blades (
-    id INTEGER PRIMARY KEY,
-    name TEXT NOT NULL,
-    short TEXT,
-    code TEXT,
-    location TEXT,
-    country TEXT NOT NULL,
-    category TEXT NOT NULL,
-    section TEXT,
-    image_url TEXT NOT NULL,
-    club_url TEXT,
-    source_url TEXT NOT NULL,
-    solid INTEGER NOT NULL DEFAULT 0,
-    UNIQUE (name, image_url)
-);
-CREATE TABLE IF NOT EXISTS answers (
-    id INTEGER PRIMARY KEY,
-    blade_id INTEGER NOT NULL REFERENCES blades(id),
-    ts TEXT NOT NULL DEFAULT (datetime('now')),
-    correct INTEGER NOT NULL,
-    hints INTEGER NOT NULL DEFAULT 0,
-    tries INTEGER NOT NULL DEFAULT 1,
-    last_guess TEXT
-);
-"""
 
 
 WORLD_ROWING = "https://world-rowing-api.soticcloud.net/stats/api/country/"
@@ -208,14 +182,6 @@ def add_world_rowing(rows, refresh=False):
         r["wr_code"], r["wr_name"] = (c["CountryCode"], c["DisplayName"]) if c else ("", "")
 
 
-def migrate(con):
-    con.executescript(SCHEMA)
-    have = {r[1] for r in con.execute("PRAGMA table_info(blades)")}
-    for col in ("wr_code", "wr_name"):
-        if col not in have:
-            con.execute(f"ALTER TABLE blades ADD COLUMN {col} TEXT NOT NULL DEFAULT ''")
-
-
 def main():
     refresh = "--refresh" in sys.argv
     pages = crawl(refresh)
@@ -241,8 +207,9 @@ def main():
         rows,
     )
     con.commit()
+    export_seed(con)
     total, solid = con.execute("SELECT count(*), sum(solid) FROM blades").fetchone()
-    print(f"{len(pages)} pages, {len(rows)} rows -> {total} blades in {DB.name} ({solid} plain one-colour)")
+    print(f"{len(pages)} pages, {len(rows)} rows -> {total} blades in {DB.name} and {SEED.relative_to(ROOT)} ({solid} plain one-colour)")
 
 
 if __name__ == "__main__":

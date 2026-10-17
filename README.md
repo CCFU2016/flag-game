@@ -32,8 +32,19 @@ uv run app.py --lan    # reachable from your phone on the same wifi
 ## Data
 
 `uv run scrape.py` crawls the site (pages cached in `cache/`, half a second
-between requests) and fills `blades.db`. Re-run with `--refresh` to pick up
-new blades; your answer history is kept.
+between requests), fills `blades.db` and writes `data/blades.json`. Re-run with
+`--refresh` to pick up new blades; your answer history is kept.
+
+`data/blades.json` is committed; `blades.db` (your answers) is not. On start the
+app builds or updates `blades.db` from the JSON, so a fresh checkout works
+without crawling.
+
+## Deploy (Railway)
+
+Railway deploys from GitHub on push (`railway.toml`: gunicorn on `$PORT`). There
+the images are not proxied: `/img/<id>` redirects to oarspotter.com. Answers
+live in the container's SQLite file, so they reset on every deploy and are
+shared by everyone using the link.
 
 Only names, towns, links and image URLs are stored. The images are fetched
 from oarspotter.com when shown and are not saved: they are Doug Rathburn's
